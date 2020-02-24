@@ -1,0 +1,24 @@
+<div class="center">
+
+    <h1>SignUp</h1><br>
+    <form (submit)="signupUser($event)">
+        <div class="form-group col-md-6">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter Username" required>
+          <small id="usernameHelp" class="form-text text-muted">Please Enter Your Username</small>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email" required>
+            <small id="emailHelp" class="form-text text-muted">Please Enter Your Email</small>
+          </div>
+        <div class="form-group col-md-6">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password" required>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit">
+      </form>
+
+</div>
+   
+
