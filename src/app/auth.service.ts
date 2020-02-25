@@ -50,4 +50,8 @@ export class AuthService {
       }
     });
   }
+
+  getToken(){
+    return localStorage.getItem('access-token');
+  }
 }
