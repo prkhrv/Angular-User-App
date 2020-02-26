@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-admin',
@@ -9,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private Auth:AuthService,private router:Router) { }
+
+   public Users = [];
+
+  constructor(private Auth:AuthService,private router:Router,private getData:DataService) { }
 
 
   logout (){
@@ -20,6 +24,7 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getData.getUsers().subscribe(users => this.Users = users);
   }
 
 }
